@@ -283,4 +283,3 @@ npm run build
 This compiles optimized assets into the `/dist` directory. Serve `/dist` using NGINX or static web host proxying `/api` requests to `http://127.0.0.1:8000`.
 
 ---
-*KisanTech AI Verification & Engineering Team*
