@@ -1,0 +1,7 @@
+# Local machine-learning model artifacts
+/models/
+/agriculture model for AI crop doctor tab/classifiers/vit/
+
+# Generated Python bytecode
+__pycache__/
+*.py[cod]

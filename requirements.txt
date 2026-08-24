@@ -1,0 +1,12 @@
+fastapi
+uvicorn[standard]
+httpx
+pydantic
+python-multipart
+pillow
+psutil
+huggingface_hub
+transformers
+sentence-transformers
+torch
+opencv-python
