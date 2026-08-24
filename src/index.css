@@ -1,0 +1,84 @@
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(3, 7, 18, 0.8);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(16, 185, 129, 0.4);
+}
+
+/* Glassmorphism Classes */
+.glass-panel {
+  background: rgba(10, 16, 30, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.glass-panel-interactive {
+  background: rgba(12, 20, 38, 0.65);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-panel-interactive:hover {
+  background: rgba(18, 30, 56, 0.8);
+  border-color: rgba(16, 185, 129, 0.35);
+  box-shadow: 0 10px 30px -5px rgba(16, 185, 129, 0.2);
+  transform: translateY(-2px);
+}
+
+.aurora-bg {
+  background: radial-gradient(ellipse at top left, rgba(16, 185, 129, 0.18), transparent 50%),
+              radial-gradient(ellipse at top right, rgba(99, 102, 241, 0.15), transparent 50%),
+              radial-gradient(ellipse at bottom left, rgba(139, 92, 246, 0.12), transparent 50%),
+              radial-gradient(ellipse at bottom right, rgba(20, 184, 166, 0.15), transparent 50%),
+              #02040a;
+}
+
+/* Animations */
+@keyframes laserScan {
+  0% { top: 0%; opacity: 0.8; }
+  50% { top: 95%; opacity: 1; }
+  100% { top: 0%; opacity: 0.8; }
+}
+
+.animate-laser {
+  animation: laserScan 2.5s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.05); }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s infinite ease-in-out;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.shimmer-skeleton {
+  background: linear-gradient(90deg, rgba(255,255,255,0.03) 25%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0.03) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.8s infinite;
+}
+
+.ai-orb-glow {
+  background: radial-gradient(circle at 35% 35%, #34d399, #059669 40%, #3b82f6 70%, #6366f1 100%);
+  box-shadow: 0 0 30px rgba(52, 211, 153, 0.6), inset 0 0 15px rgba(255,255,255,0.6);
+  animation: pulseGlow 3s ease-in-out infinite;
+}
